@@ -33,9 +33,7 @@ ALLOWED_HOSTS = []
 DJANGO_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
-    # This is new for django-allauth
     'django.contrib.sites',
-
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
