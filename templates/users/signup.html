@@ -12,13 +12,12 @@
         {% csrf_token %}
         <form method="POST" enctype="multipart/form-data">
         {{ form.as_p }}
-        </form>
+
 
         <button class="btn btn-secondary btn-block mt-5" type="submit">Register!</button>
         <a class="btn btn-primary btn-block" href="{% provider_login_url "facebook" method="oauth2" %}">
             <span class="fab fa-facebook"></span>
             Signup with facebook
         </a>
-    </form>
 
 {% endblock %}

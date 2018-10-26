@@ -5,6 +5,7 @@
 {% endblock%}
 
 {% block container %}
+{% load static %}
 
 <div class="cabezera">
 
@@ -17,28 +18,16 @@
                     <ul class="slides">
 
                         <li>
-                            <img src="../static/img/Wallpapers-oscuros.jpg" alt="">
-                            <div class="caption center-align">
-                                <h3>Lorem, ipsum dolor.</h3>
-                                <h5 class="light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, praesentium.</h5>
-                            </div>
+                            <img src="{% static 'img/banner.jpg' %}" >
+
                         </li>
 
                         <li>
-                            <img src="../static/img/s3.jpg" alt="">
-                            <div class="caption right-align">
-                                <h3>Lorem, ipsum dolor.</h3>
-                                <h5 class="light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, praesentium.</h5>
-                            </div>
+                            <img src="{% static 'img/banner2.jpg' %}">
                         </li>
 
-
                         <li>
-                            <img src="../static/img/405537.jpg" alt="">
-                            <div class="caption left-align">
-                                <h3>Lorem, ipsum dolor.</h3>
-                                <h5 class="light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, praesentium.</h5>
-                            </div>
+                            <img src="{% static 'img/banner 3.jpg' %}">
                         </li>
 
                     </ul>

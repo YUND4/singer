@@ -22,7 +22,7 @@ class Post(models.Model):
         ('B', 'BIENESTAR CIUDADANO'),
         ('O', 'OTRA'),
     )
-    categories = models.CharField(max_length=1, choices=CATEGORIES,default='O')
+    categories = models.CharField(max_length=20)
 
     city = models.CharField(max_length=255,default='N/A')
     photo = models.ImageField(upload_to='posts/photos')
