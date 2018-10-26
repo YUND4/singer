@@ -4,6 +4,7 @@
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import CreateView, DetailView, ListView
+from django.shortcuts import render
 
 # Forms
 from posts.forms import PostForm
@@ -11,16 +12,21 @@ from posts.forms import PostForm
 # Models
 from posts.models import Post
 
-
 class PostsFeedView(LoginRequiredMixin, ListView):
     """Return all published posts."""
-
     template_name = 'posts/feed.html'
+    model = Post
+    ordering = ('created',)
+    paginate_by = 30
+    context_object_name = 'posts'
+
+class PostsSearchView(LoginRequiredMixin, ListView):
+    """Return all published posts."""
+    template_name = 'posts/search.html'
     model = Post
     ordering = ('-created',)
     paginate_by = 30
     context_object_name = 'posts'
-
 
 class PostDetailView(LoginRequiredMixin, DetailView):
     """Return post detail."""

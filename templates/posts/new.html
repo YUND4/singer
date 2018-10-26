@@ -17,7 +17,7 @@
                     <input type="hidden" name="user" value="{{ user.pk}}" />
                     <input type="hidden" name="profile" value="{{ profile.pk }}" />
 
-                    {# Website field #}
+                    {# Title field #}
                     <div class="form-group">
                         <input
                             class="form-control {% if form.title.errors %}is-invalid{% endif %}"
@@ -30,7 +30,46 @@
                         </div>
                     </div>
 
-                    {# Photo field #}
+                    {# Description field #}
+                    <div class="form-group">
+                        <input
+                            class="form-control {% if form.description.errors %}is-invalid{% endif %}"
+                            type="text"
+                            name="description"
+                            placeholder="Description"
+                        >
+                        <div class="invalid-feedback">
+                            {% for error in form.description.errors %}{{ error }}{% endfor %}
+                        </div>
+                    </div>
+
+                    {# city field #}
+                    <div class="form-group">
+                        <input
+                            class="form-control {% if form.city.errors %}is-invalid{% endif %}"
+                            type="text"
+                            name="city"
+                            placeholder="City"
+                        >
+                        <div class="invalid-feedback">
+                            {% for error in form.city.errors %}{{ error }}{% endfor %}
+                        </div>
+                    </div>
+
+                    {# city field #}
+                    <div class="form-group">
+                        <input
+                            class="form-control {% if form.categories.errors %}is-invalid{% endif %}"
+                            type="text"
+                            name="categories"
+                            placeholder="Categories"
+                        >
+                        <div class="invalid-feedback">
+                            {% for error in form.categories.errors %}{{ error }}{% endfor %}
+                        </div>
+                    </div>
+
+                    {# Photo1 field #}
                     <div class="form-group">
                         <label>Choose your photo:</label>
                         <input

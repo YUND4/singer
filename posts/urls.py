@@ -24,5 +24,13 @@ urlpatterns = [
         route='posts/<int:pk>/',
         view=views.PostDetailView.as_view(),
         name='detail'
+    ),
+
+
+    path(
+        route='search/',
+        view=views.PostsSearchView.as_view(),
+        name='search',
+
     )
 ]
