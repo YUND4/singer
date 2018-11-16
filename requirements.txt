@@ -2,3 +2,4 @@ Django
 django-allauth
 pillow
 django_heroku
+gunicorn
