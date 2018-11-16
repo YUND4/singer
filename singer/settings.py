@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 import mimetypes
-import dj_database_url
+import django_heroku
 
 mimetypes.add_type("image/svg+xml", ".svg", True)
 
