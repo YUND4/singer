@@ -100,7 +100,7 @@ WSGI_APPLICATION = 'singer.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'djangogirls',
+        'NAME': 'singer',
         'USER': 'name',
         'PASSWORD': '',
         'HOST': 'localhost',
