@@ -7,17 +7,24 @@
 {% endblock %}
 
 {% block container %}
+<div class="container">
+   <div class="row justify-content-md-center">
+      <div class="col-6 pt-3 pb-3" id="profile-box">
+               <form action="{% url 'users:signup' %}" method="POST">
+               {% csrf_token %}
+                 <form method="POST" enctype="multipart/form-data">
+                {{ form.as_p }}
+        
 
-    <form action="{% url 'users:signup' %}" method="POST">
-        {% csrf_token %}
-        <form method="POST" enctype="multipart/form-data">
-        {{ form.as_p }}
-
-
-        <button class="btn btn-secondary btn-block mt-5" type="submit">Register!</button>
-        <a class="btn btn-primary btn-block" href="#"facebook" method="oauth2" %}">
+                <button class="btn btn-secondary btn-block mt-5" type="submit">Register!</button
+                     
+         <a class="btn btn-primary btn-block" href="#"facebook" method="oauth2" %}">
             <span class="fab fa-facebook"></span>
             Signup with facebook
-        </a>
+         </a>
+
+      </div>
+   </div>
+</div>
 
 {% endblock %}
